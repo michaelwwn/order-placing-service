@@ -222,8 +222,9 @@ class OrderManager:
             if index in self.successful_orders:
                 continue
             try:
+                order_details = ', '.join(f'{col}: {val}' for col, val in order.items())
                 if self.dry_run:
-                    logging.info(f"Dry run: Validating order: {order}")
+                    logging.info(f"Dry run: Validating order: {order_details}")
                 else:
                     await self.place_order_with_retry(index, order)
                 await asyncio.sleep(1 / self.rate_limit)
