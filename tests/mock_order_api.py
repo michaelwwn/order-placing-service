@@ -36,9 +36,9 @@ async def handle_place_order(request):
     payload = await request.json()
     account_balance = accounts[api_key]['balance']
     order_amount = float(payload['price']) * float(payload['quantity'])
-
+    
     logging.info(
-        f"Order placed by {accounts[api_key]['email']} for {order_amount} amount")
+        f"Order Fill - Pair: {payload['pair']}, Price {payload['price']}, Quantity: {payload['quantity']}, Cash Value: {order_amount}, Email: {accounts[api_key]['email']}")
 
     if order_amount > account_balance:
         return web.json_response({

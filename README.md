@@ -6,7 +6,7 @@ Order Listing Service is use to place list of orders as soon as possible on the 
 ## Assumption
 1. Each account has a unique API Key.
 2. Orders will be filled immediately regardless of the price.
-3. The mock server's balance is in JTOUSDT.
+3. The mock server's balance is in USDT.
 4. The mock server can be accessed without authentication.
 
 ## Installation
@@ -14,7 +14,7 @@ Order Listing Service is use to place list of orders as soon as possible on the 
 # Install Dependencies
 python3 -m pip install -r requirements.txt
 # Copy Environment File
-copy .env.example.env .env
+cp .env.example .env
 ```
 
 ### Running the server
