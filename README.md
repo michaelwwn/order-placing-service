@@ -8,6 +8,7 @@ Order Listing Service is use to place list of orders as soon as possible on the 
 2. Orders will be filled immediately regardless of the price.
 3. The mock server's balance is in USDT.
 4. The mock server can be accessed without authentication.
+5. The mock server only support BUY.
 
 ## Installation
 ```bash
